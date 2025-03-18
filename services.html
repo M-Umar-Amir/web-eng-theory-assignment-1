@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - Web Application</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0-alpha.1/dist/tailwind.min.css" rel="stylesheet">
-    <link href="output.css" rel="stylesheet">
 </head>
 
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
     <!-- Navbar -->
     <nav class="bg-blue-600 dark:bg-blue-800 text-white p-4 fixed w-full z-10 top-0">
@@ -63,7 +62,13 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+        });
+    </script>
+
 </body>
 
 </html>
